@@ -42,10 +42,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Class1.cs" />
+    <Compile Include="CourseService.cs" />
+    <Compile Include="LessonService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ResultLessonService.cs" />
+    <Compile Include="TextService.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\English.Data\English.Data.csproj">
+      <Project>{E06E8392-41F7-4C2F-9D1F-586402BF1511}</Project>
+      <Name>English.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\English.Model\English.Model.csproj">
+      <Project>{B7375822-1E71-4D82-9BF3-DB2E26FBEE4D}</Project>
+      <Name>English.Model</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

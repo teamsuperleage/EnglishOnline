@@ -1,6 +1,7 @@
 namespace English.Data
 {
     using English.Model.Model;
+    using Microsoft.AspNet.Identity.EntityFramework;
     using System;
     using System.Data.Entity;
     using System.Linq;
@@ -21,11 +22,22 @@ namespace English.Data
 
         // Add a DbSet for each entity type that you want to include in your model. For more information 
         // on configuring and using a Code First model, see http://go.microsoft.com/fwlink/?LinkId=390109.
-
         public virtual DbSet<Course> Courses { get; set; }
         public virtual DbSet<Lesson> Lessons { get; set; }
         public virtual DbSet<ResultLesson> ResultLessons { get; set; }
         public virtual DbSet<Text> Texts { get; set; }
+
+        public static EnglishOnlineDbContext Create()
+        {
+            return new EnglishOnlineDbContext();
+        }
+
+        protected override void OnModelCreating(DbModelBuilder builder)
+        {
+            builder.Entity<IdentityUserRole>().HasKey(i => new { i.UserId, i.RoleId });
+            builder.Entity<IdentityUserLogin>().HasKey(i => i.UserId);
+        }
+
     }
 
     //public class MyEntity

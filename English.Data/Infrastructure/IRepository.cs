@@ -20,7 +20,11 @@ namespace English.Data.Infrastructure
 
         //Delete multi records
         void DeleteMulti(Expression<Func<T, bool>> where);
+        T Delete(int id);
 
-     
+        T GetSingleById(int id);
+
+        IEnumerable<T> GetAll(string[] includes = null);
+
     }
 }

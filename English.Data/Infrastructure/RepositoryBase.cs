@@ -56,6 +56,28 @@ namespace English.Data.Infrastructure
                 dbSet.Remove(obj);
         }
 
-       
+        public T Delete(int id)
+        {
+            var entity = dbSet.Find(id);
+            return dbSet.Remove(entity);
+        }
+
+        public T GetSingleById(int id)
+        {
+            return dbSet.Find(id);
+        }
+
+        public IEnumerable<T> GetAll(string[] includes = null)
+        {
+            if (includes != null && includes.Count() > 0)
+            {
+                var query = dataContext.Set<T>().Include(includes.First());
+                foreach (var include in includes.Skip(1))
+                    query = query.Include(include);
+                return query.AsQueryable();
+            }
+
+            return dataContext.Set<T>().AsQueryable();
+        }
     }
 }
