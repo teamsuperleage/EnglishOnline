@@ -217,12 +217,22 @@
     <Content Include="App_Center\Component\lesson_Categories\lessonController.js" />
     <Content Include="App_Center\Component\lesson_Categories\lessonModule.js" />
     <Content Include="App_Center\Component\lesson_Categories\lessonView.html" />
-    <Content Include="App_Center\Share\modules\EnglishOnline.Common.js" />
+    <Content Include="App_Center\Share\modules\englishonline.common.js" />
+    <Content Include="App_Center\Share\Navbar\navbarDirective.html" />
+    <Content Include="App_Center\Share\Navbar\navbarDirective.js" />
     <Content Include="App_Center\Share\service\apiService.js" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\breadcrumb.css" />
+    <Content Include="Content\font-awesome.min.css" />
+    <Content Include="Content\responsive.css" />
+    <Content Include="Content\style.css" />
+    <Content Include="Content\_about.css" />
+    <Content Include="Content\_courses.css" />
+    <Content Include="Content\_feature.css" />
+    <Content Include="Content\_price.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -231,6 +241,12 @@
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="bower.json" />
     <Content Include=".bowerrc" />
+    <Content Include="Content\breadcrumb.css.map" />
+    <Content Include="Content\style.css.map" />
+    <Content Include="Content\_about.css.map" />
+    <Content Include="Content\_courses.css.map" />
+    <Content Include="Content\_feature.css.map" />
+    <Content Include="Content\_price.css.map" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
@@ -250,9 +266,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </Content>
     <Content Include="Views\Web.config" />
-    <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
-    <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
