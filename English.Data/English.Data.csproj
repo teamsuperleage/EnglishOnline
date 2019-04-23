@@ -87,9 +87,29 @@
     <Compile Include="Infrastructure\IUnitOfWork.cs" />
     <Compile Include="Infrastructure\RepositoryBase.cs" />
     <Compile Include="Infrastructure\UnitOfWork.cs" />
-    <Compile Include="Migrations\201903221024513_firstinit.cs" />
-    <Compile Include="Migrations\201903221024513_firstinit.Designer.cs">
-      <DependentUpon>201903221024513_firstinit.cs</DependentUpon>
+    <Compile Include="Migrations\201904120248012_init.cs" />
+    <Compile Include="Migrations\201904120248012_init.Designer.cs">
+      <DependentUpon>201904120248012_init.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201904120319104_addIdentity.cs" />
+    <Compile Include="Migrations\201904120319104_addIdentity.Designer.cs">
+      <DependentUpon>201904120319104_addIdentity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201904230451512_editlesson.cs" />
+    <Compile Include="Migrations\201904230451512_editlesson.Designer.cs">
+      <DependentUpon>201904230451512_editlesson.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201904230457266_updateText.cs" />
+    <Compile Include="Migrations\201904230457266_updateText.Designer.cs">
+      <DependentUpon>201904230457266_updateText.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201904230600528_addimagecourse.cs" />
+    <Compile Include="Migrations\201904230600528_addimagecourse.Designer.cs">
+      <DependentUpon>201904230600528_addimagecourse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201904230705047_updatecou.cs" />
+    <Compile Include="Migrations\201904230705047_updatecou.Designer.cs">
+      <DependentUpon>201904230705047_updatecou.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -103,15 +123,30 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201903221024513_firstinit.resx">
-      <DependentUpon>201903221024513_firstinit.cs</DependentUpon>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\English.Model\English.Model.csproj">
       <Project>{B7375822-1E71-4D82-9BF3-DB2E26FBEE4D}</Project>
       <Name>English.Model</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201904120248012_init.resx">
+      <DependentUpon>201904120248012_init.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904120319104_addIdentity.resx">
+      <DependentUpon>201904120319104_addIdentity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904230451512_editlesson.resx">
+      <DependentUpon>201904230451512_editlesson.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904230457266_updateText.resx">
+      <DependentUpon>201904230457266_updateText.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904230600528_addimagecourse.resx">
+      <DependentUpon>201904230600528_addimagecourse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904230705047_updatecou.resx">
+      <DependentUpon>201904230705047_updatecou.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -1,0 +1,294 @@
+﻿
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link rel="icon" href="~/img/favicon.png" type="image/png">
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <!-- Bootstrap 3.3.5 -->
+    <link href="~/Assets/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Assets/toastr/toastr.css" rel="stylesheet" />
+    <!-- Font Awesome -->
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="~/Content/index.css">
+    <link href="~/Assets/angular-loading-bar/build/loading-bar.css" rel="stylesheet" />
+    <link rel="stylesheet" href="~/Content/bootstrap.min.css">
+    <link rel="stylesheet" href="~/Content/responsive.css">
+    <link rel="stylesheet" href="~/Content/font-awesome.min.css">
+    <link rel="stylesheet" href="~/Content/Site.css">
+    <link rel="stylesheet" href="~/vendors/linericon/style.css">
+
+    <link rel="stylesheet" href="~/vendors/owl-carousel/owl.carousel.min.css">
+    <link rel="stylesheet" href="~/vendors/lightbox/simpleLightbox.css">
+    <link rel="stylesheet" href="~/vendors/nice-select/css/nice-select.css">
+    <link rel="stylesheet" href="~/vendors/animate-css/animate.css">
+    <link rel="stylesheet" href="~/vendors/popup/magnific-popup.css">
+</head>
+<body>
+    @{ Html.RenderAction("Header", "Home");}
+   
+    <!--================End Finance Area =================-->
+    @RenderBody()
+    <!--================End Courses Area =================-->
+    <!--================Team Area =================-->
+    <section class="team_area p_120">
+        <div class="container">
+            <div class="main_title">
+                <h2>Meet Our Faculty</h2>
+                <p>There is a moment in the life of any aspiring astronomer that it is time to buy that first telescope. It’s exciting to think about setting up your own viewing station.</p>
+            </div>
+            <div class="row team_inner">
+                <div class="col-lg-3 col-sm-6">
+                    <div class="team_item">
+                        <div class="team_img">
+                            <img class="rounded-circle" src="/img/team/team-1.jpg" alt="">
+                            <div class="hover">
+                                <a href="#"><i class="fa fa-facebook"></i></a>
+                                <a href="#"><i class="fa fa-twitter"></i></a>
+                                <a href="#"><i class="fa fa-linkedin"></i></a>
+                            </div>
+                        </div>
+                        <div class="team_name">
+                            <h4>Ethel Davis</h4>
+                            <p>Managing Director (Sales)</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="team_item">
+                        <div class="team_img">
+                            <img class="rounded-circle" src="/img/team/team-2.jpg" alt="">
+                            <div class="hover">
+                                <a href="#"><i class="fa fa-facebook"></i></a>
+                                <a href="#"><i class="fa fa-twitter"></i></a>
+                                <a href="#"><i class="fa fa-linkedin"></i></a>
+                            </div>
+                        </div>
+                        <div class="team_name">
+                            <h4>Ethel Davis</h4>
+                            <p>Managing Director (Sales)</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="team_item">
+                        <div class="team_img">
+                            <img class="rounded-circle" src="/img/team/team-3.jpg" alt="">
+                            <div class="hover">
+                                <a href="#"><i class="fa fa-facebook"></i></a>
+                                <a href="#"><i class="fa fa-twitter"></i></a>
+                                <a href="#"><i class="fa fa-linkedin"></i></a>
+                            </div>
+                        </div>
+                        <div class="team_name">
+                            <h4>Ethel Davis</h4>
+                            <p>Managing Director (Sales)</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="team_item">
+                        <div class="team_img">
+                            <img class="rounded-circle" src="/img/team/team-4.jpg" alt="">
+                            <div class="hover">
+                                <a href="#"><i class="fa fa-facebook"></i></a>
+                                <a href="#"><i class="fa fa-twitter"></i></a>
+                                <a href="#"><i class="fa fa-linkedin"></i></a>
+                            </div>
+                        </div>
+                        <div class="team_name">
+                            <h4>Ethel Davis</h4>
+                            <p>Managing Director (Sales)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--================End Team Area =================-->
+    <!--================Testimonials Area =================-->
+    <section class="testimonials_area p_120">
+        <div class="container">
+            <div class="testi_slider owl-carousel">
+                <div class="item">
+                    <div class="testi_item">
+                        <img src="/img/testimonials/testi-3.png" alt="">
+                        <h4>Fannie Rowe</h4>
+                        <ul class="list">
+                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                        </ul>
+                        <p>Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker. Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker.</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="testi_item">
+                        <img src="/img/testimonials/testi-3.png" alt="">
+                        <h4>Fannie Rowe</h4>
+                        <ul class="list">
+                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                        </ul>
+                        <p>Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker. Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker.</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="testi_item">
+                        <img src="/img/testimonials/testi-3.png" alt="">
+                        <h4>Fannie Rowe</h4>
+                        <ul class="list">
+                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                        </ul>
+                        <p>Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker. Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--================End Testimonials Area =================-->
+    <!--================Pagkages Area =================-->
+    <section class="packages_area p_120">
+        <div class="container">
+            <div class="row packages_inner">
+                <div class="col-lg-4">
+                    <div class="packages_text">
+                        <h3>Choose <br />Course Packages</h3>
+                        <p>There is a moment in the life of any aspiring astronomer that it is time to buy that first telescope. It’s exciting to think about setting up your own viewing station.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="packages_item">
+                        <div class="pack_head">
+                            <i class="lnr lnr-graduation-hat"></i>
+                            <h3>Premium</h3>
+                            <p>For the individuals</p>
+                        </div>
+                        <div class="pack_body">
+                            <ul class="list">
+                                <li><a href="#">Secure Online Transfer</a></li>
+                                <li><a href="#">Unlimited Styles for interface</a></li>
+                                <li><a href="#">Reliable Customer Service</a></li>
+                            </ul>
+                        </div>
+                        <div class="pack_footer">
+                            <h4>£399.00</h4>
+                            <a class="main_btn" href="#">Join Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="packages_item">
+                        <div class="pack_head">
+                            <i class="lnr lnr-diamond"></i>
+                            <h3>Exclusive</h3>
+                            <p>For the individuals</p>
+                        </div>
+                        <div class="pack_body">
+                            <ul class="list">
+                                <li><a href="#">Secure Online Transfer</a></li>
+                                <li><a href="#">Unlimited Styles for interface</a></li>
+                                <li><a href="#">Reliable Customer Service</a></li>
+                            </ul>
+                        </div>
+                        <div class="pack_footer">
+                            <h4>£399.00</h4>
+                            <a class="main_btn" href="#">Join Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--================End Pagkages Area =================-->
+    <!--================Latest Blog Area =================-->
+    <section class="latest_blog_area p_120">
+        <div class="container">
+            <div class="main_title">
+                <h2>Latest Posts From Blog</h2>
+                <p>There is a moment in the life of any aspiring astronomer that it is time to buy that first telescope. It’s exciting to think about setting up your own viewing station.</p>
+            </div>
+            <div class="row latest_blog_inner">
+                <div class="col-lg-3 col-md-6">
+                    <div class="l_blog_item">
+                        <img class="img-fluid" src="/img/latest-blog/l-blog-1.jpg" alt="">
+                        <a class="date" href="#">25 October, 2018  |  By Mark Wiens</a>
+                        <a href="single-blog.html"><h4>Addiction When Gambling Becomes A Problem</h4></a>
+                        <p>Computers have become ubiquitous in almost every facet of our lives. At work, desk jockeys spend hours in front of their desktops, while delivery</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="l_blog_item">
+                        <img class="img-fluid" src="/img/latest-blog/l-blog-2.jpg" alt="">
+                        <a class="date" href="#">25 October, 2018  |  By Mark Wiens</a>
+                        <a href="single-blog.html"><h4>Addiction When Gambling Becomes A Problem</h4></a>
+                        <p>Computers have become ubiquitous in almost every facet of our lives. At work, desk jockeys spend hours in front of their desktops, while delivery</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="l_blog_item">
+                        <img class="img-fluid" src="/img/latest-blog/l-blog-3.jpg" alt="">
+                        <a class="date" href="#">25 October, 2018  |  By Mark Wiens</a>
+                        <a href="single-blog.html"><h4>Addiction When Gambling Becomes A Problem</h4></a>
+                        <p>Computers have become ubiquitous in almost every facet of our lives. At work, desk jockeys spend hours in front of their desktops, while delivery</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="l_blog_item">
+                        <img class="img-fluid" src="/img/latest-blog/l-blog-4.jpg" alt="">
+                        <a class="date" href="#">25 October, 2018  |  By Mark Wiens</a>
+                        <a href="single-blog.html"><h4>Addiction When Gambling Becomes A Problem</h4></a>
+                        <p>Computers have become ubiquitous in almost every facet of our lives. At work, desk jockeys spend hours in front of their desktops, while delivery</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--================End Latest Blog Area =================-->
+    <!--================Impress Area =================-->
+    <section class="impress_area p_120">
+        <div class="container">
+            <div class="impress_inner text-center">
+                <h2>Become an instructor</h2>
+                <p>There is a moment in the life of any aspiring astronomer that it is time to buy that first telescope. It’s exciting to think about setting up your own viewing station whether that is on the deck</p>
+                <a class="main_btn2" href="#">Apply for the post</a>
+            </div>
+        </div>
+    </section>
+    @{ Html.RenderAction("Footer", "Home");}
+
+    <script src="~/vendors/lightbox/simpleLightbox.min.js"></script>
+    <script src="~/vendors/nice-select/js/jquery.nice-select.min.js"></script>
+    <script src="~/vendors/isotope/imagesloaded.pkgd.min.js"></script>
+    <script src="~/vendors/isotope/isotope.pkgd.min.js"></script>
+    <script src="~/vendors/owl-carousel/owl.carousel.min.js"></script>
+    <script src="~/vendors/popup/jquery.magnific-popup.min.js"></script>
+
+    <script src="~/vendors/counter-up/jquery.waypoints.min.js"></script>
+    <script src="~/vendors/counter-up/jquery.counterup.js"></script>
+    <script src="~/Assets/jquery/dist/jquery.min.js"></script>
+    <script src="~/Scripts/jquery-3.3.1.min.js"></script>
+    
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/popper.js"></script>
+    <script src="~/Scripts/stellar.js"></script>
+    <script src="~/Scripts/jquery.ajaxchimp.min.js"></script>
+    <script src="~/Scripts/mail-script.js"></script>
+    <script src="~/Scripts/theme.js"></script>
+
+</body>
+</html>
+

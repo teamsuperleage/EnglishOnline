@@ -23,11 +23,16 @@ namespace English.Model.Model
         [Required]
         [MaxLength(256)]
         public string Search { set; get; }
-
+        [Required]
+        [MaxLength(50)]
+        public string Image { set; get; }
         [Required]
         [MaxLength(256)]
         public string Notice { set; get; }
-
-        public virtual IEnumerable<Course> Courses { set; get; }
+        [Required]
+        [MaxLength(50)]
+        public string Id_Text { set; get; }
+        public virtual IEnumerable<Lesson> Lessons { set; get; }
+        public virtual IEnumerable<Text> Texts { set; get; }
     }
 }

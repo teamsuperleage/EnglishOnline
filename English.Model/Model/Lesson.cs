@@ -28,10 +28,10 @@ namespace English.Model.Model
         [MaxLength(256)]
         public string Notice { set; get; }
         [Required]
-        [MaxLength(50)]
+        [MaxLength(100)]
         public string Url_Image { set; get; }
         [Required]
-        [MaxLength(50)]
+        [MaxLength(100)]
         public string Url_Video { set; get; }
 
         [Required]

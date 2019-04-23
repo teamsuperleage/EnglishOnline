@@ -40,10 +40,14 @@ namespace English.Model.Model
         [Required]
         [MaxLength(50)]
         public string Id_Lesson { set; get; }
-
+     
         [ForeignKey("Id_Lesson")]
         public virtual Lesson Lessons { set; get; }
-        
+        [Required]
+        [MaxLength(50)]
+        public string Id_Course { set; get; }
+        public virtual Course Courses { set; get; }
+
 
     }
 }

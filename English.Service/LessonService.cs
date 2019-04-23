@@ -19,6 +19,7 @@ namespace English.Service
         Lesson Delete(int id);
 
         IEnumerable<Lesson> GetAll();
+        IEnumerable<Lesson> GetAllElement(int id);
 
         Lesson GetById(int id);
 
@@ -50,6 +51,12 @@ namespace English.Service
         {
             return _LessonRepository.GetAll();
         }
+
+        public IEnumerable<Lesson> GetAllElement(int id)
+        {
+            return _LessonRepository.GetAllElement(id);
+        }
+
         public Lesson GetById(int id)
         {
             return _LessonRepository.GetSingleById(id);

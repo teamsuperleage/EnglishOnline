@@ -18,6 +18,9 @@ namespace English.Model.Model
         [MaxLength(256)]
         public string Address { set; get; }
 
+        [MaxLength(20)]
+        public string Phone { set; get; }
+
         public DateTime? BirthDay { set; get; }
 
         public async Task<ClaimsIdentity> GenerateUserIdentityAsync(UserManager<ApplicationUser> manager)

@@ -12,7 +12,16 @@ namespace English.WebApi
         public static void RegisterRoutes(RouteCollection routes)
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
-
+            routes.MapRoute(
+           name: "AllCourse",
+           url: "AllCourse.html",
+           defaults: new { controller = "Course", action = "Courses"}
+          );
+            routes.MapRoute(
+            name: "Course",
+            url: "course.p-{coursenId}.html",
+            defaults: new { controller = "Course", action = "Detail", lessonId = UrlParameter.Optional }
+           );
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",

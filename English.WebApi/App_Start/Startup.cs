@@ -8,11 +8,13 @@ using System.Web.Mvc;
 using Autofac;
 using Autofac.Integration.Mvc;
 using Autofac.Integration.WebApi;
+using AutoMapper;
 using English.Data;
 using English.Data.Infrastructure;
 using English.Data.Repositories;
 using English.Model.Model;
 using English.Service;
+using English.WebApi.Mapping;
 using Microsoft.AspNet.Identity;
 using Microsoft.Owin;
 using Microsoft.Owin.Security.DataProtection;
@@ -33,7 +35,13 @@ namespace English.WebApi.App_Start
         }
         private void ConfigAutofac(IAppBuilder app)
         {
+            var mapperConfiguration = new MapperConfiguration(cfg =>
+            {
+                cfg.AddProfile(new MappingProfile());
+            });
+            var mapper = mapperConfiguration.CreateMapper();
             var builder = new ContainerBuilder();
+            builder.RegisterInstance(mapper).As<IMapper>();
             builder.RegisterControllers(Assembly.GetExecutingAssembly());
             // Register your Web API controllers.
             builder.RegisterApiControllers(Assembly.GetExecutingAssembly()); //Register WebApi Controllers
