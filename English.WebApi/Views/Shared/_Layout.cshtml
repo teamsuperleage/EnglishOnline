@@ -14,12 +14,19 @@
     <!-- Font Awesome -->
     <!-- Ionicons -->
     <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
-    <link rel="stylesheet" href="~/Content/index.css">
-    <link href="~/Assets/angular-loading-bar/build/loading-bar.css" rel="stylesheet" />
-    <link rel="stylesheet" href="~/Content/bootstrap.min.css">
-    <link rel="stylesheet" href="~/Content/responsive.css">
-    <link rel="stylesheet" href="~/Content/font-awesome.min.css">
-    <link rel="stylesheet" href="~/Content/Site.css">
+    @*<link rel="stylesheet" href="~/Content/index.css">
+        <link href="~/Assets/angular-loading-bar/build/loading-bar.css" rel="stylesheet" />
+        <link rel="stylesheet" href="~/Content/bootstrap.min.css">
+        <link rel="stylesheet" href="~/Content/responsive.css">
+        <link rel="stylesheet" href="~/Content/font-awesome.min.css">
+        <link rel="stylesheet" href="~/Content/Site.css">
+        <link rel="stylesheet" href="~/Content/css/style.css">
+        <link rel="stylesheet" href="~/Content/css/form.css">
+        <link rel="stylesheet" href="~/Content/css/custom.css">*@
+    @Styles.Render("~/bundles/css_system")
+    @Styles.Render("~/bundles/css")
+
+
     <link rel="stylesheet" href="~/vendors/linericon/style.css">
 
     <link rel="stylesheet" href="~/vendors/owl-carousel/owl.carousel.min.css">
@@ -30,7 +37,33 @@
 </head>
 <body>
     @{ Html.RenderAction("Header", "Home");}
-   
+
+    <!-- The Modal -->
+    <div class="modal" id="LoginModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body">
+                    @{Html.RenderAction("Login", "Account");}
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- The Modal -->
+    <div class="modal" id="RegisterModal">
+        <div>
+            <div class="modal-content">
+                <div class="modal-body">
+                    @{Html.RenderAction("Register", "Account");}
+                </div>
+            </div>
+        </div>
+    </div>
+    @*<div>
+            @{Html.RenderAction("Login", "Account");}
+        </div>
+        <div>
+            @{Html.RenderAction("Register", "Account");}
+        </div>*@
     <!--================End Finance Area =================-->
     @RenderBody()
     <!--================End Courses Area =================-->
@@ -269,6 +302,9 @@
         </div>
     </section>
     @{ Html.RenderAction("Footer", "Home");}
+    @Scripts.Render("~/bundles/scripts_system")
+
+
 
     <script src="~/vendors/lightbox/simpleLightbox.min.js"></script>
     <script src="~/vendors/nice-select/js/jquery.nice-select.min.js"></script>
@@ -276,18 +312,17 @@
     <script src="~/vendors/isotope/isotope.pkgd.min.js"></script>
     <script src="~/vendors/owl-carousel/owl.carousel.min.js"></script>
     <script src="~/vendors/popup/jquery.magnific-popup.min.js"></script>
-
     <script src="~/vendors/counter-up/jquery.waypoints.min.js"></script>
     <script src="~/vendors/counter-up/jquery.counterup.js"></script>
     <script src="~/Assets/jquery/dist/jquery.min.js"></script>
-    <script src="~/Scripts/jquery-3.3.1.min.js"></script>
-    
-    <script src="~/Scripts/bootstrap.min.js"></script>
-    <script src="~/Scripts/popper.js"></script>
-    <script src="~/Scripts/stellar.js"></script>
-    <script src="~/Scripts/jquery.ajaxchimp.min.js"></script>
-    <script src="~/Scripts/mail-script.js"></script>
-    <script src="~/Scripts/theme.js"></script>
+    @*<script src="~/Scripts/jquery-3.3.1.min.js"></script>
+
+        <script src="~/Scripts/bootstrap.min.js"></script>
+        <script src="~/Scripts/popper.js"></script>
+        <script src="~/Scripts/stellar.js"></script>
+        <script src="~/Scripts/jquery.ajaxchimp.min.js"></script>
+        <script src="~/Scripts/mail-script.js"></script>
+        <script src="~/Scripts/theme.js"></script>*@
 
 </body>
 </html>

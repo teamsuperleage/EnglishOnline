@@ -64,7 +64,8 @@ namespace English.Data.Infrastructure
 
         public T GetSingleById(int id)
         {
-            return dbSet.Find(id);
+
+            return dbSet.Find(Convert.ToString(id));
         }
 
         public IEnumerable<T> GetAll(string[] includes = null)

@@ -24,11 +24,13 @@ namespace English.WebApi.Controllers
 
         }
         // GET: Product
-        public ActionResult Detail(int courseId)
+        public ActionResult Detail(string id)
         {
-            ViewBag.courseModel = _CourseService.GetById(courseId);
-            var listlessonModel = _LessonService.GetAllElement(courseId);
-            return View(listlessonModel);
+            int courseid = int.Parse(id);
+            ViewBag.courseModel = _mapper.Map<Course, CourseViewModel>(_CourseService.GetById(courseid));
+            var listlessonModel = _LessonService.GetAllElement(courseid);
+            var listlessonViewModel = _mapper.Map<IEnumerable<Lesson>, IEnumerable<LessonViewModel>>(listlessonModel);
+            return View(listlessonViewModel);
           
         }
         public ActionResult Courses ()

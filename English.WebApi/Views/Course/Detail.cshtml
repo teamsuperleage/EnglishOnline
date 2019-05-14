@@ -1,8 +1,8 @@
-﻿@model IEnumerable<English.Model.Model.Lesson>
+﻿@model IEnumerable<English.WebApi.Models.LessonViewModel>
     @{
         ViewBag.Title = "Detail";
         Layout = "~/Views/Shared/_Layout.cshtml";
-        var course = (English.Model.Model.Course)ViewBag.courseModel;
+        var course = (English.WebApi.Models.CourseViewModel)ViewBag.courseModel;
     }
 
     <!--================Home Banner Area =================-->
@@ -33,10 +33,10 @@
                             <a class="nav-link" id="grammar-tab" data-toggle="tab" href="#grammar" role="tab" aria-controls="grammar" aria-selected="false">English Grammar</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" id="lesson-tab" data-toggle="tab" href="#lesson" role="tab" aria-controls="lesson" aria-selected="false">Lesson Detail</a>
+                            <a class="nav-link active" id="lesson-tab" data-toggle="tab" href="#lesson" role="tab" aria-controls="lesson" aria-selected="false">Lesson Detail</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" id="comments-tab" data-toggle="tab" href="#comments" role="tab" aria-controls="comments" aria-selected="false">Comments</a>
+                            <a class="nav-link " id="comments-tab" data-toggle="tab" href="#comments" role="tab" aria-controls="comments" aria-selected="false">Comments</a>
                         </li>
                     </ul>
                     <div class="tab-content" id="myTabContent">
@@ -50,12 +50,12 @@
                                 <img src="@course.Image" class="img-responsive watch-right" alt="@course.Name" />
                             </div>
                         </div>
-                        <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+                        <div class="tab-pane fade" id="lesson" role="tabpanel" aria-labelledby="lesson-tab">
                             <div class="objctive_text">
                                 <ul class="list">
                                     @foreach (var item in Model)
                                     {
-                                        <li><a href="#">@item.Name</a></li>
+                                        <li><a href="@item.Url_Video">@item.Name</a></li>
                                     }
                              
                                 </ul>

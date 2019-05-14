@@ -19,14 +19,26 @@ namespace English.WebApi
           );
             routes.MapRoute(
             name: "Course",
-            url: "course.p-{coursenId}.html",
-            defaults: new { controller = "Course", action = "Detail", lessonId = UrlParameter.Optional }
+            url: "{controller}/{action}/{id}",
+            defaults: new { Controller = "Course", action = "Detail", id = UrlParameter.Optional }
+           );
+            routes.MapRoute(
+            name: "Login",
+            url: "{controller}/{action}/{id}",
+            defaults: new { Controller = "Account", action = "Login", id = UrlParameter.Optional }
+           );
+            routes.MapRoute(
+            name: "Resgister",
+            url: "{controller}/{action}/{id}",
+            defaults: new { Controller = "Account", action = "Register", id = UrlParameter.Optional }
            );
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
             );
+            routes.IgnoreRoute("{*botdetect}",
+      new { botdetect = @"(.*)BotDetectCaptcha\.ashx" }); 
         }
     }
 }

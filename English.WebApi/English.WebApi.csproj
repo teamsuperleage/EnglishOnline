@@ -62,6 +62,12 @@
     <Reference Include="AutoMapper, Version=8.0.0.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
       <HintPath>..\packages\AutoMapper.8.0.0\lib\net461\AutoMapper.dll</HintPath>
     </Reference>
+    <Reference Include="BotDetect, Version=4.4.1.0, Culture=neutral, PublicKeyToken=74616036388b765f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Captcha.4.4.1\lib\net35\BotDetect.dll</HintPath>
+    </Reference>
+    <Reference Include="BotDetect.Web.Mvc, Version=4.4.1.0, Culture=neutral, PublicKeyToken=74616036388b765f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Captcha.4.4.1\lib\net35\BotDetect.Web.Mvc.dll</HintPath>
+    </Reference>
     <Reference Include="BundleTransformer.Core, Version=1.10.0.0, Culture=neutral, PublicKeyToken=973c344c93aac60d, processorArchitecture=MSIL">
       <HintPath>..\packages\BundleTransformer.Core.1.10.0\lib\net40\BundleTransformer.Core.dll</HintPath>
     </Reference>
@@ -128,6 +134,9 @@
       <HintPath>..\packages\System.Buffers.4.0.0\lib\netstandard1.1\System.Buffers.dll</HintPath>
     </Reference>
     <Reference Include="System.Data" />
+    <Reference Include="System.Data.SQLite, Version=1.0.110.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.Core.1.0.110.0\lib\net46\System.Data.SQLite.dll</HintPath>
+    </Reference>
     <Reference Include="System.Drawing" />
     <Reference Include="System.Runtime.InteropServices.RuntimeInformation, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Runtime.InteropServices.RuntimeInformation.4.0.0\lib\net45\System.Runtime.InteropServices.RuntimeInformation.dll</HintPath>
@@ -231,15 +240,17 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="App_Start\Startup.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\CourseController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Mapping\AutoMapperConfiguration.cs" />
     <Compile Include="Mapping\MappingProfile.cs" />
     <Compile Include="Models\CourseViewModel.cs" />
     <Compile Include="Models\LessonViewModel.cs" />
+    <Compile Include="Models\LoginViewModel.cs" />
+    <Compile Include="Models\ResgisterViewModel.cs" />
     <Compile Include="Models\TextViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -726,23 +737,28 @@
     <Content Include="Assets\toastr\toastr.js" />
     <Content Include="Assets\toastr\toastr.min.css" />
     <Content Include="Assets\toastr\toastr.min.js" />
-    <Content Include="Content\bootstrap-theme.css" />
-    <Content Include="Content\bootstrap-theme.min.css" />
-    <Content Include="Content\bootstrap.css" />
-    <Content Include="Content\bootstrap.min.css" />
-    <Content Include="Content\breadcrumb.css" />
-    <Content Include="Content\font-awesome.min.css" />
-    <Content Include="Content\index.css" />
-    <Content Include="Content\responsive.css" />
-    <Content Include="Content\style.css" />
-    <Content Include="Content\_about.css" />
-    <Content Include="Content\_courses.css" />
-    <Content Include="Content\_feature.css" />
-    <Content Include="Content\_price.css" />
+    <Content Include="Content\css\style_register.css" />
+    <Content Include="Content\system\bootstrap-theme.css" />
+    <Content Include="Content\system\bootstrap-theme.min.css" />
+    <Content Include="Content\system\bootstrap.css" />
+    <Content Include="Content\system\bootstrap.min.css" />
+    <Content Include="Content\system\breadcrumb.css" />
+    <Content Include="Content\css\bootstrap.css" />
+    <Content Include="Content\css\custom.css" />
+    <Content Include="Content\css\etalage.css" />
+    <Content Include="Content\css\form.css" />
+    <Content Include="Content\system\font-awesome.min.css" />
+    <Content Include="Content\system\index.css" />
+    <Content Include="Content\system\responsive.css" />
+    <Content Include="Content\system\style.css" />
+    <Content Include="Content\system\_about.css" />
+    <Content Include="Content\system\_courses.css" />
+    <Content Include="Content\system\_feature.css" />
+    <Content Include="Content\system\_price.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
-    <Content Include="Content\Site.css" />
+    <Content Include="Content\system\Site.css" />
     <Content Include="img\banner\banner-2.jpg" />
     <Content Include="img\banner\banner.jpg" />
     <Content Include="img\banner\home-banner.jpg" />
@@ -839,16 +855,17 @@
     <Content Include="img\testimonials\testi-3.png" />
     <Content Include="img\testimonials\testi-bg.jpg" />
     <Content Include="img\video-1.jpg" />
-    <Content Include="Scripts\bootstrap.js" />
-    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="rdf.xml" />
+    <Content Include="Scripts\System\bootstrap.js" />
+    <Content Include="Scripts\System\bootstrap.min.js" />
     <Content Include="bower.json" />
     <Content Include=".bowerrc" />
-    <Content Include="Content\breadcrumb.css.map" />
-    <Content Include="Content\style.css.map" />
-    <Content Include="Content\_about.css.map" />
-    <Content Include="Content\_courses.css.map" />
-    <Content Include="Content\_feature.css.map" />
-    <Content Include="Content\_price.css.map" />
+    <Content Include="Content\system\breadcrumb.css.map" />
+    <Content Include="Content\system\style.css.map" />
+    <Content Include="Content\system\_about.css.map" />
+    <Content Include="Content\system\_courses.css.map" />
+    <Content Include="Content\system\_feature.css.map" />
+    <Content Include="Content\system\_price.css.map" />
     <Content Include="img\.DS_Store" />
     <Content Include="img\elements\_DS_Store" />
     <Content Include="Assets\angular-loading-bar\.bower.json" />
@@ -1036,26 +1053,26 @@
     <Content Include="Assets\toastr\toastr.js.map" />
     <Content Include="Assets\toastr\toastr.less" />
     <Content Include="Assets\toastr\toastr.scss" />
-    <None Include="Scripts\jquery-3.3.1.intellisense.js" />
-    <Content Include="Scripts\contact.js" />
-    <Content Include="Scripts\custom.js" />
-    <Content Include="Scripts\gmaps.min.js" />
-    <Content Include="Scripts\jquery-3.3.1.js" />
-    <Content Include="Scripts\jquery-3.3.1.min.js" />
-    <Content Include="Scripts\jquery-3.3.1.slim.js" />
-    <Content Include="Scripts\jquery-3.3.1.slim.min.js" />
-    <None Include="Scripts\jquery.validate-vsdoc.js" />
-    <Content Include="Scripts\jquery.ajaxchimp.min.js" />
-    <Content Include="Scripts\jquery.form.js" />
-    <Content Include="Scripts\jquery.validate.js" />
-    <Content Include="Scripts\jquery.validate.min.js" />
-    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
-    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
-    <Content Include="Scripts\mail-script.js" />
-    <Content Include="Scripts\modernizr-2.8.3.js" />
-    <Content Include="Scripts\popper.js" />
-    <Content Include="Scripts\stellar.js" />
-    <Content Include="Scripts\theme.js" />
+    <None Include="Scripts\System\jquery-3.3.1.intellisense.js" />
+    <Content Include="Scripts\System\contact.js" />
+    <Content Include="Scripts\System\custom.js" />
+    <Content Include="Scripts\System\gmaps.min.js" />
+    <Content Include="Scripts\System\jquery-3.3.1.js" />
+    <Content Include="Scripts\System\jquery-3.3.1.min.js" />
+    <Content Include="Scripts\System\jquery-3.3.1.slim.js" />
+    <Content Include="Scripts\System\jquery-3.3.1.slim.min.js" />
+    <None Include="Scripts\System\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\System\jquery.ajaxchimp.min.js" />
+    <Content Include="Scripts\System\jquery.form.js" />
+    <Content Include="Scripts\System\jquery.validate.js" />
+    <Content Include="Scripts\System\jquery.validate.min.js" />
+    <Content Include="Scripts\System\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\System\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\System\mail-script.js" />
+    <Content Include="Scripts\System\modernizr-2.8.3.js" />
+    <Content Include="Scripts\System\popper.js" />
+    <Content Include="Scripts\System\stellar.js" />
+    <Content Include="Scripts\System\theme.js" />
     <Content Include="vendors\animate-css\animate.css" />
     <Content Include="vendors\animate-css\wow.min.js" />
     <Content Include="vendors\bootstrap-datepicker\bootstrap-datetimepicker.min.css" />
@@ -1126,6 +1143,8 @@
     <Content Include="vendors\scss\_variables.scss" />
     <Content Include="Views\Course\Detail.cshtml" />
     <Content Include="Views\Course\Courses.cshtml" />
+    <Content Include="Views\Shared\Login.cshtml" />
+    <Content Include="Views\Shared\Register.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -1157,19 +1176,23 @@
     <Folder Include="Assets\slimScroll\jquery\" />
     <Folder Include="Assets\slimScroll\ng-ckeditor\" />
     <Folder Include="Assets\slimScroll\ngBootbox\" />
+    <Folder Include="Content\Admint\" />
+    <Folder Include="Content\Client\" />
+    <Folder Include="Scripts\Admin\" />
+    <Folder Include="Scripts\Client\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
-    <Content Include="Content\bootstrap.min.css.map" />
-    <Content Include="Content\bootstrap.css.map" />
-    <Content Include="Content\bootstrap-theme.min.css.map" />
-    <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="Content\system\bootstrap.min.css.map" />
+    <Content Include="Content\system\bootstrap.css.map" />
+    <Content Include="Content\system\bootstrap-theme.min.css.map" />
+    <Content Include="Content\system\bootstrap-theme.css.map" />
     <None Include="packages.config" />
-    <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
-    <Content Include="Scripts\jquery-3.3.1.min.map" />
+    <Content Include="Scripts\System\jquery-3.3.1.slim.min.map" />
+    <Content Include="Scripts\System\jquery-3.3.1.min.map" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\English.Data\English.Data.csproj">
@@ -1227,7 +1250,9 @@
       <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
     </PropertyGroup>
     <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+    <Error Condition="!Exists('..\packages\System.Data.SQLite.Core.1.0.110.0\build\net46\System.Data.SQLite.Core.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\System.Data.SQLite.Core.1.0.110.0\build\net46\System.Data.SQLite.Core.targets'))" />
   </Target>
+  <Import Project="..\packages\System.Data.SQLite.Core.1.0.110.0\build\net46\System.Data.SQLite.Core.targets" Condition="Exists('..\packages\System.Data.SQLite.Core.1.0.110.0\build\net46\System.Data.SQLite.Core.targets')" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
